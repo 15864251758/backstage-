@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>任务管理</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/people.css" rel="stylesheet" type="text/css" >
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" style="position:fixed;">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="row">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="brand" href="/index"> <img src="images/logo3.png" alt="logo" class="logo" title="logo"> </a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="/projects">创业项目</a> </li>
+            <li name="services" id="serviceLi" class="dropdown"> <a id="categorys" class="dropdown-toggle" data-toggle="dropdown" href="#">创业服务<b class="caret"></b></a> 
+              <!--下拉菜单-->
+              <ul style="width: 612px; position: absolute; left: -262px;" class="dropdown-menu" id="service_munu">
+                <li class="fli" category="1">
+                  <h4><a style="font-size:15px;" href="#">创客工厂</a></h4>
+                  <ul class="dropul">
+                    <li style="color:#000;">工业设计</li>
+                    <li style="color:#000;">技术寻源</li>
+                  </ul>
+                </li>
+                <li class="fli" category="2">
+                  <h4><a style="font-size:15px;" href="#">创客渠道</a></h4>
+                  <ul class="dropul">
+                    <li style="color:#000;">销售渠道</li>
+                    <li style="color:#000;">物流仓储</li>
+                  </ul>
+                </li>
+                <li class="fli" category="3">
+                  <h4><a style="font-size:15px;" href="#">创客服务</a></h4>
+                  <ul class="dropul">
+                    <li style="color:#000;">法律服务</li>
+                    <li style="color:#000;">人力资源</li>
+                    <li style="color:#000;">IT信息化</li>
+                 </ul>
+                </li>
+                <li class="fli" category="4">
+                  <h4><a style="font-size:15px;" href="#">创客金融</a></h4>
+                  <ul class="dropul">
+                    <li style="color:#000;">融资顾问</li>
+                    <li style="color:#000;">投资基金</li>
+                  </ul>
+                </li>
+                <li class="fli" category="5">
+                  <h4><a style="font-size:15px;" href="#">创客空间</a></h4>
+                  <ul class="dropul">
+                    <li style="color:#000;">孵化器</li>
+                    <li style="color:#000;">加速器</li>
+                  </ul>
+                </li>
+                <li class="fli" category="6">
+                  <h4><a style="font-size:15px;" href="#">创客学院</a></h4>
+                  <ul class="dropul">
+                    <li style="color:#000;">创业辅导</li>
+                    <li style="color:#000;">高校对接</li>
+                  </ul>
+                </li>
+              </ul>
+              <!--下拉菜单 end--> 
+            </li>
+            <li><a href="/partners">合伙人</a> </li>
+            <li><a href="/activities">活动</a> </li>
+            <li><a href="/toutiao">头条</a> </li>
+          </ul>
+          <hr>
+          <div class="login-tool pull-right logged">
+            <div class="btn-group"> <a class="btn dropdown-toggle" href="#" style="padding-right:0;"> <img src="images/face-default.gif" class="img-circle user-img"> </a> <a class="btn dropdown-toggle" href="#" style="padding-left:5px;-webkit-box-shadow: none;box-shadow:none;"> dsadasdasdasd<b id="mescount"></b><span class="caret"></span></a> 
+              <!--个人中心 下拉-->
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-plus"></i>创建新项目</a> </li>
+                <li style="display: none;" id="menu_has_publish_pro"><a href="/mycenter/publish"><i class="fa fa-list"></i>我的项目</a> </li>
+                <li name="services"><a href="#"><i class="fa fa-shopping-cart"></i>订购的服务</a> </li>
+                <hr>
+                <li name="services"><a href="#"><i class="fa fa-child"></i>服务商入驻</a> </li>
+                <li name="services" id="#"><a href="#"><i class="fa fa-cubes"></i>我的服务</a> </li>
+              </ul>
+              <!--个人中心 下拉 end--> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+</div>
+<div class="container" style="margin-top:100px; margin-bottom:40px;">
+  <div class="row">
+    <div class="span2 well side-card">
+      <div class="card-list">
+        <ul class="nav nav-list">
+          <li name="services" class="nav-header" style="margin-left:-30px;font-size:14px;">企业中心</li>
+          <li><a href="#"><i class="fa fa-tags"></i> 企业信息</a></li>
+          <li class="divider" style="border-bottom:1px solid #e5e5e5"></li>
+          <li name="services"><a href="#"><i class="fa fa-smile-o"></i> 员工管理</a></li>
+          <li name="services" id="left_menu_services"><a href="#"><i class="fa  fa-bullhorn"></i> 广告管理</a></li>
+          <li name="services"><a href="#"><i class="fa  fa-calendar"></i> 任务管理</a></li>
+          <li class="divider" style="border-bottom:1px solid #e5e5e5"></li>
+          <li><a href="#"><i class="fa fa-briefcase"></i> 我的套餐</a></li>
+          <li class="divider" style="border-bottom:1px solid #e5e5e5"></li>
+          <li><a href ="#"><i class="fa fa-power-off"></i> 退出</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="span10 order_title">
+        <div class="title">
+        任务管理<small> /Management</small>  
+        </div>
+      
+
+          <form class="form-horizontal" style="margin:60px 0;">
+      <div class="control-group">
+        <label class="control-label" for="inputEmail" style="width: 90px;
+text-align: left;">员工查询</label>
+        <div>
+          <div class="input-append" style="margin-bottom:0;">
+                  <input class="span3" id="appendedInputButton" style="height:34px;" type="text" placeholder="请输入员工手机号">
+                  <button class="btn phone-search search-btn" type="button"><i class="fa fa-search"></i> 查询</button>
+                </div>
+        </div>
+      </div>
+      <div class="control-group">
+              <label class="control-label" for="inputEmail" style="width: 90px;
+text-align: left;">文章查询</label>
+              <div>
+                <div class="input-append" style="margin-bottom:0;">
+                        <input class="span3" id="appendedInputButton" style="height:34px;" placeholder="请输入文章标题" type="text">
+                        <button class="btn phone-search search-btn" type="button"><i class="fa fa-search"></i> 查询</button>
+                      </div>
+              </div>
+            </div>
+     <div class="control-group">
+             <label class="control-label" for="inputEmail" style="width: 90px;
+text-align: left;">部门查询</label>
+             <div>
+               <div class="input-append" style="margin-bottom:0;">
+                       <input class="span3" id="appendedInputButton" style="height:34px;" type="text" placeholder="请输入部门名称">
+                       <button class="btn phone-search search-btn" type="button"><i class="fa fa-search"></i> 查询</button>
+                     </div>
+             </div>
+           </div>
+    </form>
+      
+
+
+
+    </div>
+  </div>
+</div>
+
+<!--footer begin-->
+<div class="footer-all"> 
+  <!--底部内容-->
+  <div class="container"> 
+    <!--top begin-->
+    <h4 class="footer-title">为什么选择海创汇</h4>
+    <div class="row">
+      <div class="span3">
+        <div class="footer-first"> <i class="fa fa-university"></i>
+          <p>丰富的政府园区资源</p>
+          <p class="footer-first-txt">全国各地政府合作园区资源入驻，多地政府支持创业政策，为创业项目提供完善办公场地和培训等资源，更有政府初期基金</p>
+        </div>
+      </div>
+      <div class="span3">
+        <div class="footer-first"> <i class="fa fa-jpy"></i>
+          <p><em>30亿</em>孵化基金</p>
+          <p class="footer-first-txt">创客项目创投基金联合加盟，从天使到IPO，全方位解决创业项目的资金后顾之忧。</p>
+        </div>
+      </div>
+      <div class="span3">
+        <div class="footer-first"> <i class="fa fa-cloud"></i>
+          <p><em>3万</em>家销售渠道资源</p>
+          <p class="footer-first-txt">依托海尔集团日日顺四网资源，遍布全国村镇级，真正做到了“销售到村，送货到门，服务到户”，更有合作销售渠道加盟</p>
+        </div>
+      </div>
+      <div class="span3">
+        <div class="footer-first"> <i class="fa fa-cogs"></i>
+          <p><em>6万</em>家加工制造资源</p>
+          <p class="footer-first-txt">模块制造商，供应商，大数据，数字支付各方面资源加盟，合力共赢。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--top end-->
+  <hr>
+  </hr>
+  <!--middle begin-->
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <p class="contact"> <a href="/page/aboutus"><i class="fa fa-thumbs-up"></i>关于我们</a> <a href="#);"><i class="fa fa-envelope"></i>联系我们</a> <a href="#"><i class="fa fa-briefcase"></i>商务合作</a> </p>
+        <p class="copy"> <a href="/page/terms" target="_blank">使用条款</a>|<a href="/page/privacy" target="_blank">隐私权政策</a>|鲁ICP备15042957号-1 Copyright ©2016 海尔集团 版权所有 </p>
+      </div>
+    </div>
+  </div>
+  <!--middle end--> 
+  <!--底部内容（删除）--> 
+</div>
+<!--footer end-->
+
+</body>
+</html>
